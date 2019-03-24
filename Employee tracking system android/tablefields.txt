@@ -1,0 +1,8 @@
+activity_list table fields;
+emp_id;
+activity;
+budgeted_hrs;
+posting date;
+starting time;
+finishing time;
+report;

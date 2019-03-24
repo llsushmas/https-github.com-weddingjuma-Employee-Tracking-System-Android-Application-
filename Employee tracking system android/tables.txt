@@ -1,0 +1,15 @@
+create table activity_list(
+emp_id number primary key,
+activity varchar2(20),
+budgeted_hrs varchar2(10),
+postingdate date,
+startingtime date,
+finishingtime date,
+report varchar2(20))
+
+create table login(
+username varchar2(20),
+password varchar2(20));
+
+insert into login values('abc','123456');
+insert into login values('abc1','1234567');

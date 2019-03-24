@@ -1,0 +1,22 @@
+
+                               ABSTRACT
+
+Employee tracking system is an automated system used by the managers of the organization to know the work efficiency of their employees. Managers will give activity list to employees and in turn employees will generate activity status report, then the system will generate report of each employee depending upon. 
+
+It is used in all the levels of management and all the departments of an organization.
+
+Requirements:
+
+Overview: - The main objective of this project is automation of the Employee tracking system which were being done manually.
+Customer: - we are doing this project for the fulfillment of M.C.A. sixth semester.
+Goals:-  
+
+1	The main goal is to save the time of the managers.
+2	To know the work efficiency of the employees.
+3	To generate the reports of different activities taking place in an organization.
+
+software: 
+           Front End: Servlets,HTML,JavaScript
+           Back End: Oracle 
+              
+Hardware: pentium 4pc

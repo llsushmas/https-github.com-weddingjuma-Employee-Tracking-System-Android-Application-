@@ -1,0 +1,156 @@
+<HTML>
+<HEAD>
+<TITLE>login</TITLE>
+</HEAD>
+<BODY BGCOLOR=lightapple TEXT=#000000 LINK=#0066FF ALINK=#003399 VLINK=#990066>
+<SCRIPT LANGUAGE="JavaScript">
+function mysubmit()
+
+{
+
+if (validate())
+
+   {
+
+   document.forms[0].submit();
+
+   }
+
+}
+
+function validate()
+
+{
+
+if ( (isName()) && (isPass()) )
+
+   {
+
+   return true;
+
+   }
+
+return false;
+
+}
+
+function setPassFocus()
+
+{
+
+document.forms[0].passwd.focus();
+
+}
+
+
+
+// Name Validator
+
+
+
+function isName() 
+
+{
+
+var str = document.forms[0].login.value;
+
+
+
+if (str == "")
+
+   {
+
+   alert("\nThe login name field is empty.\n\nPlease enter your login name.")
+
+   document.forms[0].login.focus();
+
+   return false;
+
+   }
+
+
+
+if((str.substring(0,1) < "a" || str.substring(0,1) > "z") && (str.substring(0,1) < "A" || str.substring(0,1) > "Z"))
+
+   {
+
+   alert("The login name should begin with an alphabet. \n\nNote: Users who had login names starting with numbers or the hyphen character are requested to add a \'q\' before their names.\nFor example if your login name was \'12345\' please try to login with \'q12345\'. Your password will remain the same.");
+
+   return false;
+
+   }
+
+
+
+for (var i = 0; i < str.length; i++) 
+
+   {
+
+   var ch = str.substring(i, i + 1);
+
+   if ( ((ch < "a" || "z" < ch) && (ch < "A" || "Z" < ch)) && (ch < "0" || "9" < ch) && (ch != '_') && (ch != '-') && (ch != '.')) 
+
+      {
+
+      alert("\nThe login name field accepts alphabets, numbers & the underscore character only.\nPlease re-enter your login name.\n\nNote: Existing users will be allowed to use the fullstop and the hyphen characters also.");
+
+      document.forms[0].login.focus();
+
+      return false;
+
+      }
+
+   }
+
+return true;
+
+}
+
+
+
+// Password Validator
+
+
+
+function isPass() 
+
+{
+
+var str = document.forms[0].passwd.value;
+
+if ((str == "") || (str.length < 4)) 
+
+   {
+
+   alert("\nThe password field is empty or less than 4 characters.\n\nPlease re-enter your password.");
+
+   document.forms[0].passwd.focus();
+
+   return false;
+
+   }
+
+return true;
+
+}
+
+
+
+</Script>
+</HEAD>
+<pre>
+<FORM NAME="loginform"   METHOD=post  action="http://localhost:8081/servlet/login">
+
+User Name:   <INPUT TYPE=TEXT name=login SIZE=17 MAXLENGTH=25 OnBlur=setPassFocus()><BR>
+
+Password :   <INPUT TYPE="password" name=passwd SIZE=17 MAXLENGTH=25><BR>
+
+<SCRIPT LANGUAGE="JavaScript">
+document.forms[0].login.focus();
+document.forms[0].passwd.value = "";
+</SCRIPT>
+
+<INPUT TYPE=button NAME=button VALUE="Rush in" OnClick=mysubmit()><BR>
+</BODY>
+</HTML>
+

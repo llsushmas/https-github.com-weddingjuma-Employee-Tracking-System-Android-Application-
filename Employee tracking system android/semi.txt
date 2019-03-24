@@ -1,0 +1,30 @@
+
+The aim of the project:
+
+ All the employees haveing unique loginname. here we are provideing the
+security constraints.weather the user login or password is wrong it return
+to the same page.
+
+Here Manager gives the activity list done by the employees. Activity list is
+modified or updated by the Manager itself. by seeing the activity list
+the employees ofthat department has to fulfill work.
+
+when employee entered into the system the project manager will send the
+activity list tothe corresponding system.  He can give the activity list
+as well as the status ofthe project.
+
+Managercan view the status ofthe employee by viewactivitylist.Viewing working 
+efficiency of employees. System will generate report of each employee and
+ submit it to manager.
+
+Employee give the report to the manager.  Manager will view the report and
+takes the decision.
+
+Manager will decide add/delete the employee by the seeing performance of the
+employee and also add/delete the project.Once completion of the project he will 
+delete the project.
+
+If he want to make any changes in the project he can change it.
+
+
+ 
